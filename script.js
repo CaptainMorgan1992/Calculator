@@ -33,6 +33,17 @@ buttons.map((button) => {
         let poweredNumber = Math.pow(display.innerText, 2);
         display.innerText = poweredNumber;
         break;
+      case "!":
+        let number = display.innerText;
+        display.innerText = factorial(number);
+
+        function factorial(number) {
+          if (number == 1) {
+            return 1;
+          } else {
+            return number * factorial(number - 1);
+          }
+        }
 
       default:
         if (
